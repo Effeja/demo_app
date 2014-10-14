@@ -5,17 +5,16 @@ ruby '1.9.3'
 
 gem 'rails', '4.0.8'
 
+group :development do
+gem 'sqlite3', '1.3.8'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
-gem 'pg', '0.15.1'
-gem 'rails_12factor', '0.0.2'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+
   gem 'sass-rails',   '4.0.3'
   gem 'coffee-rails', '4.0.1'
 
@@ -23,9 +22,18 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '2.1.1'
+  gem 'jquery-rails', '3.0.4'
+  gem 'turbolinks', '1.1.1'
+  gem 'jbuilder', '1.0.2'
+  
+group :doc do
+  gem 'sdoc', '0.3.20', require: false
 end
 
-gem 'jquery-rails', '3.0.4'
+group :production do
+gem 'pg', '0.15.1'
+gem 'rails_12factor', '0.0.2'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
